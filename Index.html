@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Teka-Teki Ngabuburit</title>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.container {
+    max-width: 600px;
+    margin: auto;
+    background: rgba(255,255,255,0.1);
+    padding: 20px;
+    border-radius: 15px;
+}
+
+h1 {
+    color: gold;
+}
+
+.question {
+    margin: 20px 0;
+}
+
+input {
+    padding: 10px;
+    width: 80%;
+    border-radius: 8px;
+    border: none;
+}
+
+button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background: gold;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    background: orange;
+}
+
+.result {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #00ffcc;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+<h1>🧠 Teka-Teki Ngabuburit Bareng Wakab slebew🌙</h1>
+
+<div class="question">
+<p>1️⃣ Siapa kah Nama Lengkap dari presiden 1+4-2?</p>
+<input type="text" id="q1">
+</div>
+
+<div class="question">
+<p>2️⃣ Siapakah Nama Bapak dari Bapak nya Kakek dari gua dur?</p>
+<input type="text" id="q2">
+</div>
+
+<div class="question">
+<p>3️⃣ Di tiup tidak terbang,tapi bila kena angin tiba" bisa terbang, apakah itu?</p>
+<input type="text" id="q3">
+</div>
+
+<div class="question">
+<p>4️⃣ Siapakah yang paling ganteng Ronaldo atau Messi? </p>
+<input type="text" id="q4">
+</div>
+
+<div class="question">
+<p>5️⃣ Ada di depan kita tapi tidak bisa dilihat. Apakah itu guys?</p>
+<input type="text" id="q5">
+</div>
+
+<button onclick="checkAnswers()">Cek Jawaban</button>
+
+<div class="result" id="result"></div>
+
+</div>
+
+<script>
+function checkAnswers() {
+    let score = 0;
+
+    let a1 = document.getElementById("q1").value.toLowerCase();
+    let a2 = document.getElementById("q2").value.toLowerCase();
+    let a3 = document.getElementById("q3").value.toLowerCase();
+    let a4 = document.getElementById("q4").value.toLowerCase();
+    let a5 = document.getElementById("q5").value.toLowerCase();
+
+    if(a1.includes("Bacharuddin Jusuf Habibie")) score++;
+    if(a2.includes("Kiai Asy'ari")) score++;
+    if(a3.includes("Buyung puyuh")) score++;
+    if(a4.includes("Kedua nya")) score++;
+    if(a5.includes("masa depan Kamu")) score++;
+
+    document.getElementById("result").innerHTML =
+    "Skor kamu: " + score + " dari 5 🎉";
+}
+</script>
+
+</body>
+</html>
